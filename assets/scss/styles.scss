@@ -1,0 +1,199 @@
+// IMPORT NORMALIZE
+
+@import "normalize";
+
+// IMPORT VARIABLES
+
+@import "variables";
+
+// IMPORT BOURBON
+
+@import "bourbon/bourbon";
+@import "bitters/base";
+@import "neat/neat";
+
+// TABLE OF CONTENTS
+
+// 1. GLOBAL STYLES
+// 2. FONTS
+// 3. TYPOGRAPHY
+// 4. FLASHES
+// 5. LISTS
+// 6. SIMPLIFIED GRID
+
+// GLOBAL STYLES
+
+body, html {
+	width: 100%;
+	height: 100%;
+	background: $white;
+	margin: 0;
+	padding: 0;
+	z-index: 1;
+}
+
+.main {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $cream;
+}
+
+.content-wrap {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 15px;
+	@include row();
+	@include outer-container;
+	@include mq(iphone) {
+		max-width: 320px;
+	}
+	@include mq(android) {
+		max-width: 480px;
+	}
+	@include mq(tablet) {
+		max-width: 768px;
+	}
+	@include mq(laptop) {
+		max-width: 960px;
+	}
+	@include mq(desktop) {
+		max-width: 1280px;
+	}
+}
+
+// TYPOGRAPHY
+
+h2 {
+	float: left;
+	@include span-columns(6);
+	text-align: center;
+	font-family: $roboto;
+	font-size: 1.5em;
+	font-weight: 100;
+	@include mq(android) {
+		font-size: 2.5em;
+	}
+	@include mq(tablet) {
+		font-size: 3em;
+	}
+}
+
+h3 {
+	@include span-columns(12);
+	@include box-sizing(border-box);
+	padding: 20px 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: $raleway;
+	font-size: 1em;
+	font-weight: 100;
+	@include mq(android) {
+		font-size: 1.5em;
+	}
+	@include mq(tablet) {
+		margin-top: 75px;
+		@include span-columns(4);
+		font-size: 2em;
+	}
+}
+
+h4 {
+	text-transform: capitalize;
+	font-family: $roboto;
+	font-size: 1.5em;
+	font-weight: 300;
+	@include mq(android) {
+		font-size: 2.5em;
+	}
+	@include mq(tablet) {
+		font-size: 3em;
+	}
+}
+
+h5 {
+	text-transform: capitalize;
+	font-family: $roboto;
+	font-size: 1em;
+	font-weight: 300;
+	@include mq(android) {
+		font-size: 1.15em;
+	}
+	@include mq(tablet) {
+		font-size: 1.25em;
+	}
+}
+
+// IMPORTED CSS SECTIONS
+
+@import "animate";
+@import "hero";
+@import "spec";
+
+section {
+	float: left;
+	padding: 10px 10px;
+	overflow-x: hidden;
+	@include span-columns(12);
+	@include box-sizing(border-box);
+	@include mq(tablet) {
+		padding: 20px 20px;
+	}
+}
+
+
+
+// FLASHES
+
+.success {
+	@extend %flash-success;
+}
+
+.error {
+	@extend %flash-error;
+}
+
+.notice {
+	@extend %flash-notice;
+}
+
+.alert {
+	@extend %flash-alert;
+}
+
+// LISTS
+
+ol.default {
+	@extend %default-ol;
+}
+
+ul.default {
+	@extend %default-ul;
+}
+
+// SIMPLIFIED GRID
+
+.whole { @include span-columns(12); }
+
+.half { @include span-columns(6); }
+
+.third { @include span-columns(4); }
+
+.fourth { @include span-columns(3); }
+
+.sixth { @include span-columns(2); }
+
+.one { @include span-columns(1); }
+
+.grid-example {
+	float: left;
+	height: 100px;
+	background: $muteNavy;
+	margin-bottom: 2.35765%;
+}

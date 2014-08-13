@@ -1,0 +1,65 @@
+// LOGO CONTAINER
+.logo-container {
+	position: relative;
+	@include span-columns(12);
+	@include mq(tablet) {
+		@include span-columns(4);
+	}
+	img {
+		position: relative;
+		left: 50%;
+		margin-left: -75px;
+	}
+}
+
+// SPEC BAR DELAY
+#specText {
+	-webkit-animation-delay: 3s;
+	animation-delay: 3s;
+}
+
+#androidLogo {
+	-webkit-animation-delay: 3.5s;
+	animation-delay: 3.5s;
+}
+
+#appleLogo {
+	-webkit-animation-delay: 4s;
+	animation-delay: 4s;
+}
+
+// SPEC BOX
+
+.specWrap {
+	padding: 10px 0;
+	@include span-columns(12);
+	@include row();
+	@include box-sizing(border-box);
+	h4 {
+		@include span-columns(12);
+		text-align: center;
+		@include mq(tablet) {
+			text-align: left;
+			@include span-columns(4);
+		}
+	}
+	.specBox {
+		padding: 10px 0;
+		@include span-columns(12);
+		@include row();
+		@include box-sizing(border-box);
+		@include mq(tablet) {
+			@include span-columns(4);
+		} 
+		.box {
+			float: left;
+			@include span-columns(3);
+			height: 50px;
+			border: 1px solid $charcoal;
+		}
+		h5 {
+			float: left;
+			@include span-columns(9);
+		}
+	}
+}

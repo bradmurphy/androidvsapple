@@ -1,0 +1,96 @@
+//  HERO SECTION
+#hero {
+	text-align: center;
+	.vs {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -41px;
+		margin-top: -50px;
+		z-index: 2;
+		font-family: $raleway;
+		color: $muteBlue !important;
+		-webkit-text-shadow: 0px 0px 15px $charcoal;
+		text-shadow: 0px 0px 15px $charcoal;
+		font-size: 5em;
+		-webkit-animation-delay: 1.5s;
+		animation-delay: 1.5s;
+		@include mq(tablet) {
+			font-size: 10em;
+			margin-left: -82px;
+			margin-top: -100px;
+		}
+		@include mq(laptop) {
+			font-size: 15em;
+			margin-left: -123px;
+			margin-top: -150px;
+		}
+ 	}
+}
+
+// COLOR ANIMATION CLASS
+
+.colors {
+	@include animation (changeColor 15s ease-in-out);
+	@include animation-iteration-count(infinite);
+	@include animation-direction(alternate);
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-delay: 0s !important;
+	animation-delay: 0s !important;
+}
+
+// COLOR ANIMATION
+@include keyframes(changeColor) {
+	0% {
+		color: $muteBlue;
+	}
+	25% {
+		color: $yellow;
+	}
+	50% {
+		color: $brightRed;
+	}
+	75% {
+		color: $muteGreen;
+	}
+}
+
+// HERO DIV
+.hero {
+	float: left;
+	background: $white;
+	@include span-columns(6);
+	text-align: center;
+	img {
+		margin: 0 auto;
+		@include transition(all .3s ease-in-out);
+	}
+}
+
+// ANDROID ANIMATION DELAYS
+#androidHero {
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+}
+
+#androidText {
+	-webkit-animation-delay: 1.5s;
+	animation-delay: 1.5s;
+}
+
+// APPLE ANIMATION DELAYS
+#appleHero {
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+}
+
+#appleText {
+	-webkit-animation-delay: 2.5s;
+	animation-delay: 2.5s;
+}
+
+#appleLogo {
+	-webkit-animation-delay: 4s;
+	animation-delay: 4s;
+}
