@@ -66,7 +66,7 @@ var battleAPI = (function () {
 
 		$("h6").waypoint(function() {
 		  	$(this).attr("class", "animated rollIn");
-		}, { offset: "75%" });
+		}, { offset: "95%" });
 
 	}
 
