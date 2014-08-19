@@ -123,8 +123,8 @@ header {
 		width: 28.33333333333333%;
 		text-align: center;
 		height: 48px;
-		border-right: solid 1px $headerBorder;
 		border-bottom: solid 1px $headerBorder;
+		overflow: hidden;
 		@include box-sizing(border-box);
 		a {
 			display: block;

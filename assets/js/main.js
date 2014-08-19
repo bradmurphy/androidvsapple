@@ -54,17 +54,19 @@ var battleAPI = (function () {
 		// BIG SEXY ANIMATION
 		$('#bigSexy').waypoint(function() {
 		  	$(this).attr("class", "dropDown");
-		  	$("h6").attr("class", "animated zoomIn");
 		}, { offset: "75%" });
 
 		$('#bigSexyCenter').waypoint(function() {
 		  	$("#bigSexyLeft").attr("class", "leftAnimation");
 		  	$("#bigSexyCenter").attr("class", "dropDownCenter");
 		  	$("#bigSexyRight").attr("class", "rightAnimation");
-		  	$("h6").attr("class", "animated zoomIn");
 		}, { offset: "75%" });
 
+		// H6 ANIMATION
 
+		$("h6").waypoint(function() {
+		  	$(this).attr("class", "animated rollIn");
+		}, { offset: "75%" });
 
 	}
 

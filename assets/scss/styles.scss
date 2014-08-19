@@ -143,8 +143,9 @@ h6 {
 	font-weight: 100;
 	clear: both;
 	margin-top: 20px;
-	@include animation-delay(2.75s);
-	@include animation-fill-mode(forwards);
+	opacity: 0;
+	@include animation-delay(1s);
+	@include animation-fill-mode(both);
 	@include animation-iteration-count(1);
 	@include mq(android) {
 		font-size: 2.5em;
