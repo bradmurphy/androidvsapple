@@ -1,5 +1,4 @@
 // MEDIA QUERY MIXIN
-
 @mixin mq($point) {
 	@if $point == desktop {
 		@media (min-width: 1280px) { @content; }
@@ -18,13 +17,17 @@
 	}
 }
 
-// FONTS
+// ANIMATION DELAY MIXIN
+@mixin animation-delay($time) {
+	-webkit-animation-delay: $time;
+	animation-delay: $time;
+}
 
+// FONTS
 $raleway: 'Raleway', sans-serif;
 $roboto: 'Roboto', sans-serif;
 
 // COlORS
-
 $muteAqua: #1abc9c;
 $aqua: #16a085;
 $muteGreen: #2ecc71;
@@ -51,7 +54,12 @@ $white: #fff;
 $black: #000;
 
 // SITE COLORS
-
+$androidGreen: #a4c639;
+$headerBackground: #fbfbfb;
+$headerGray: #5b6064;
+$headerBorder: #e1e4e6;
+$footerBackground: #f6f6f6;
+$googleBlue: #00abe4;
 $background: #f1f5f7;
 $site-gray: #7b858e;
 $site-light: #dbe3e5;

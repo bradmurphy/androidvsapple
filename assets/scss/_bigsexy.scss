@@ -1,0 +1,137 @@
+// BIG SEXY IMAGE
+#bigSexy {
+	width: 100%;
+	// opacity: 0;
+	@include mq(tablet) {
+		display: none;
+	}
+}
+
+.bigSexyWrap {
+	display: none;
+	@include mq(tablet) {
+		display: block;
+		width: 750px;
+		position: relative;
+		left: 50%;
+		margin-left: -375px;
+	}
+	#bigSexyLeft {
+		display: none;
+		@include mq(tablet) {
+			float: left;
+			position: relative;
+			top: 8px;
+			left: 196px;
+			display: inline;
+			z-index: 1;
+			opacity: 0;
+		}
+	}
+	#bigSexyCenter {
+		display: none;
+		@include mq(tablet) {
+			position: absolute;
+			display: inline;
+			left: 50%;
+			margin-left: -158px;
+			z-index: 999;
+			opacity: 0;
+		}
+	}
+	#bigSexyRight {
+		display: none;
+		@include mq(tablet) {
+			float:left;
+			position: relative;
+			top: 8px;
+			right: -123px;
+			display: inline;
+			z-index: 1;
+			opacity: 0;
+		}
+	}
+}
+
+// ANIMATION CLASSES
+.leftAnimation {
+	@include animation(leftAnimation 1s ease);
+	@include animation-iteration-count(1);
+	@include animation-fill-mode(forwards);
+	@include animation-delay(1.5s);
+}
+
+.dropDownCenter {
+	@include animation(dropDownCenter 1.5s ease-in-out);
+	@include animation-iteration-count(1);
+	@include animation-fill-mode(forwards);
+}
+
+.rightAnimation {
+	@include animation(rightAnimation 1s ease);
+	@include animation-iteration-count(1);
+	@include animation-fill-mode(forwards);
+	@include animation-delay(1.5s);
+}
+
+.dropDown {
+	@include animation(dropDown 2.75s ease-in-out);
+	@include animation-iteration-count(1);
+	@include animation-fill-mode(forwards);
+	@include animation-delay(2.75s);
+}
+
+// BIG SEXY ANIMATIONS
+@include keyframes(dropDown) {
+	0% {
+		@include transform(translateY(-2500px));
+		opacity: 0;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		@include transform(translateY(0));
+	}
+}
+
+@include keyframes(dropDownCenter) {
+	0% {
+		top: -1000px;
+		opacity: 0;
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+@include keyframes(leftAnimation) {
+	0% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		left: 1px;
+	}
+}
+
+@include keyframes(rightAnimation) {
+	0% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		right: -316px;
+	}
+}

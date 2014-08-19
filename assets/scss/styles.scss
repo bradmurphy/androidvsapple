@@ -32,14 +32,15 @@ body, html {
 	z-index: 1;
 }
 
-.main {
-	position: absolute;
-	z-index: 3;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: $cream;
+section {
+	float: left;
+	padding: 20px 10px;
+	overflow: hidden;
+	@include span-columns(12);
+	@include box-sizing(border-box);
+	@include mq(tablet) {
+		padding: 30px 20px;
+	}
 }
 
 .content-wrap {
@@ -94,6 +95,7 @@ h3 {
 	font-family: $raleway;
 	font-size: 1em;
 	font-weight: 100;
+	opacity: 0;
 	@include mq(android) {
 		font-size: 1.5em;
 	}
@@ -107,18 +109,17 @@ h3 {
 h4 {
 	text-transform: capitalize;
 	font-family: $roboto;
-	font-size: 1.5em;
+	font-size: 1em;
 	font-weight: 300;
 	@include mq(android) {
-		font-size: 2.5em;
+		font-size: 1.5em;
 	}
 	@include mq(tablet) {
-		font-size: 3em;
+		font-size: 2em;
 	}
 }
 
 h5 {
-	text-transform: capitalize;
 	font-family: $roboto;
 	font-size: 1em;
 	font-weight: 300;
@@ -130,27 +131,38 @@ h5 {
 	}
 }
 
-// IMPORTED CSS SECTIONS
+.android {
+	color: $androidGreen;
+}
 
-@import "animate";
-@import "hero";
-@import "spec";
-
-section {
-	float: left;
-	padding: 10px 10px;
-	overflow-x: hidden;
+h6 {
 	@include span-columns(12);
-	@include box-sizing(border-box);
+	text-align: center;
+	font-family: $roboto;
+	font-size: 1.5em;
+	font-weight: 100;
+	clear: both;
+	margin-top: 20px;
+	@include animation-delay(2.75s);
+	@include animation-fill-mode(forwards);
+	@include animation-iteration-count(1);
+	@include mq(android) {
+		font-size: 2.5em;
+	}
 	@include mq(tablet) {
-		padding: 20px 20px;
+		font-size: 3em;
 	}
 }
 
-
+// IMPORTED CSS SECTIONS
+@import "animate";
+@import "header";
+@import "hero";
+@import "spec";
+@import "bigsexy";
+@import "footer";
 
 // FLASHES
-
 .success {
 	@extend %flash-success;
 }
@@ -168,32 +180,10 @@ section {
 }
 
 // LISTS
-
 ol.default {
 	@extend %default-ol;
 }
 
 ul.default {
 	@extend %default-ul;
-}
-
-// SIMPLIFIED GRID
-
-.whole { @include span-columns(12); }
-
-.half { @include span-columns(6); }
-
-.third { @include span-columns(4); }
-
-.fourth { @include span-columns(3); }
-
-.sixth { @include span-columns(2); }
-
-.one { @include span-columns(1); }
-
-.grid-example {
-	float: left;
-	height: 100px;
-	background: $muteNavy;
-	margin-bottom: 2.35765%;
 }

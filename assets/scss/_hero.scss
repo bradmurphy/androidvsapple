@@ -1,6 +1,10 @@
 //  HERO SECTION
 #hero {
+	margin-top: 48px;
 	text-align: center;
+	@include mq(tablet) {
+		margin-top: 60px;
+	}
 	.vs {
 		position: absolute;
 		top: 50%;
@@ -88,9 +92,4 @@
 #appleText {
 	-webkit-animation-delay: 2.5s;
 	animation-delay: 2.5s;
-}
-
-#appleLogo {
-	-webkit-animation-delay: 4s;
-	animation-delay: 4s;
 }

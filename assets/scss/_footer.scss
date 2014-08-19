@@ -1,0 +1,147 @@
+// FOOTER
+footer {
+	margin-top: 20px;
+	.content-wrap {
+		padding: 0 10px;
+	}
+	float: left;
+	padding: 20px 0px;
+	overflow: hidden;
+	border-top: solid 1px $headerBorder;
+	background: $footerBackground;
+	@include span-columns(12);
+	@include box-sizing(border-box);
+	@include mq(tablet) {
+		padding: 30px 20px;
+	}
+}
+
+.footerMiddle {
+	float: left;
+	position: relative;
+	@include span-columns(12);
+	@include mq(laptop) {
+		@include span-columns(6);
+		border-right: solid 1px $headerBorder;
+	}
+	img {
+		float: left;
+		width: 62px;
+	}
+	.joinWrap {
+		float: left;
+		position: relative;
+		left: 50%;
+		width: 255px;
+		margin-left: -127px;
+		.joinWrapInner {
+			float: left;
+			span {
+				float: left;
+				font-family: $roboto;
+				font-size: .95em;
+			}
+			p {
+				float: left;
+				font-family: $roboto;
+				font-size: .6534em;
+				text-align: center;
+			}
+		}
+	}
+	form {
+		float: left;
+		width: 100%;
+		background: $white;
+		margin-top: 20px;
+		padding: 10px 15px;
+		@include box-sizing(border-box);
+		@include mq(tablet) {
+			width: 75%;
+			margin-left: 12.5%;
+		}
+		input[type="email"] {
+			float: left;
+			font-family: $roboto;
+			font-size: .9em;
+			width: 100%;
+		}
+		input[type="checkbox"] {
+			float: left;
+		}
+		p {
+			float: left;
+			width: 91%;
+			font-size: .75em;
+			font-family: $roboto;
+		}
+		input[type="submit"] {
+			color: $googleBlue !important;;
+			background-color: $white !important;
+			border-radius: 2px !important;
+			border: 1px solid #CDCECE !important;
+			padding: 3px 12px !important;
+			font-family: $roboto;
+			font-size: .75em;
+			font-weight: 300;
+		}
+	}
+}
+
+.footerRight {
+	float: left;
+	position: relative;
+	padding: 20px 0;
+	@include box-sizing(border-box);
+	@include span-columns(12);
+	@include mq(laptop) {
+		float: none;
+		height: 237px;
+		border-right: solid 1px $headerBorder;
+		@include span-columns(3);
+	}
+	.followWrap {
+		position: relative;
+		left: 50%;
+		width: 211px;
+		margin-left: -106px;
+		img {
+			margin-right: 15px;
+			cursor: pointer;
+			@include mq(laptop) {
+				float: left;
+				clear: both;
+				margin: 0px 0 20px 0;
+			}
+		}
+	}
+}
+
+.footerLeft {
+	float: left;
+	position: relative;
+	@include span-columns(12);
+	@include mq(laptop) {
+		@include span-columns(3);
+	}
+	ul {
+		position: relative;
+		left: 50%;
+		width: 230px;
+		padding: 0 0;
+		margin: 0 0 0 -115px;
+		li {
+			display: inline;
+			width: 100;
+			font-size: .75em;
+			@include mq(laptop) {
+				width: 100%;
+				display: list-item;
+				padding: 5px 10px;
+			}
+			a {
+				color: $googleBlue;
+			}
+		}
+	}
+}

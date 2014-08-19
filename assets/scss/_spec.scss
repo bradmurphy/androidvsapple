@@ -1,40 +1,46 @@
 // LOGO CONTAINER
 .logo-container {
 	position: relative;
-	@include span-columns(12);
+	@include span-columns(6);
 	@include mq(tablet) {
 		@include span-columns(4);
 	}
 	img {
 		position: relative;
+		width: 100px;
 		left: 50%;
-		margin-left: -75px;
+		margin-left: -50px;
+		opacity: 0;
+		@include mq(tablet) {
+			width: 150px;
+			margin-left: -75px;
+		}
 	}
 }
 
 // SPEC BAR DELAY
 #specText {
-	-webkit-animation-delay: 3s;
-	animation-delay: 3s;
+	-webkit-animation-delay: .5s;
+	animation-delay: .5s;
 }
 
 #androidLogo {
-	-webkit-animation-delay: 3.5s;
-	animation-delay: 3.5s;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
 }
 
 #appleLogo {
-	-webkit-animation-delay: 4s;
-	animation-delay: 4s;
+	-webkit-animation-delay: 1.5s;
+	animation-delay: 1.5s;
 }
 
 // SPEC BOX
-
 .specWrap {
 	padding: 10px 0;
 	@include span-columns(12);
 	@include row();
 	@include box-sizing(border-box);
+	opacity: 0;
 	h4 {
 		@include span-columns(12);
 		text-align: center;
@@ -53,13 +59,180 @@
 		} 
 		.box {
 			float: left;
-			@include span-columns(3);
+			@include span-columns(2.5);
+			@include box-sizing(border-box);
+			padding: 10px 0;
 			height: 50px;
 			border: 1px solid $charcoal;
+			text-align: center;
+			i {
+				font-size: 1.75em;
+			}
 		}
 		h5 {
 			float: left;
-			@include span-columns(9);
+			@include span-columns(9.5);
 		}
 	}
+}
+
+// ICON FONTS
+.fa-check {
+	color: $muteGreen;
+	opacity: 0;
+}
+
+.fa-times {
+	color: $brightRed;
+	opacity: 0;
+}
+
+// ANIMATION CLASSES
+.flipIn {
+	@include animation(flipIn 1s);
+	@include animation-fill-mode(forwards);
+	@include animation-iteration-count(1);
+	backface-visibility: visible !important;
+}
+
+.scaleIn {
+	@include animation(scaleIn .5s);
+	@include animation-fill-mode(forwards);
+	@include animation-iteration-count(1);
+}
+
+// ICON ANIMATION DELAYS
+#displayX {
+	@include animation-delay(2s);
+}
+
+#displayCheck {
+	@include animation-delay(2.5s);
+}
+
+#customCheck {
+	@include animation-delay(2.75s);
+}
+
+#customX {
+	@include animation-delay(3.25s);
+}
+
+#batteryCheck {
+	@include animation-delay(3.5s);
+}
+
+#batteryX {
+	@include animation-delay(4s);
+}
+
+#cameraCheck1 {
+	@include animation-delay(4.25s);
+}
+
+#cameraCheck2 {
+	@include animation-delay(4.75s);
+}
+
+#osCheck {
+	@include animation-delay(5s);
+}
+
+#osX {
+	@include animation-delay(5.5s);
+}
+
+#priceCheck {
+	@include animation-delay(5.75s);
+}
+
+#priceX {
+	@include animation-delay(6.25s);
+}
+
+// SECTION ANIMATION DELAYS
+#display {
+	@include animation-delay(1.5s);
+}
+
+#custom {
+	@include animation-delay(2s);
+}
+
+#battery {
+	@include animation-delay(2.5s);
+}
+
+#camera {
+	@include animation-delay(3s);
+}
+
+#os {
+	@include animation-delay(3.5s);
+}
+
+#price {
+	@include animation-delay(4s);
+}
+
+// FLIP IN ANIMATION
+@include keyframes(flipIn) {
+0% {
+		@include transform(perspective(400px) rotate3d(1, 0, 0, 90deg));
+		@include transition-timing-function(ease-in);
+    opacity: 0;
+  }
+
+  40% {
+  	@include transform(perspective(400px) rotate3d(1, 0, 0, -20deg));
+  	@include transition-timing-function(ease-in);
+  }
+
+  60% {
+  	@include transform(perspective(400px) rotate3d(1, 0, 0, 10deg));
+    opacity: 1;
+  }
+
+  80% {
+  	@include transform(perspective(400px) rotate3d(1, 0, 0, -5deg));
+  }
+
+  100% {
+  	@include transform(perspective(400px));
+  	opacity: 1;
+  }
+}
+
+// SCALE IN ANIMATION
+@include keyframes(scaleIn) {
+	0%, 20%, 40%, 60%, 80%, 100% {
+			@include transition-timing-function(cubic-bezier(0.2, 0.61, 0.35, 1));
+	  }
+
+	  0% {
+	    opacity: 0;
+	    @include transform(scale(1));
+	  }
+
+	  20% {
+	  	@include transform(scale(1.15));
+	  }
+
+	  40% {
+	  	@include transform(scale(.85));
+	  }
+
+	  60% {
+	    opacity: 1;
+	    @include transform(scale(1.05));
+	  }
+
+	  80% {
+	  	@include transform(scale(.95));
+	  }
+
+	  100% {
+	    opacity: 1;
+	    @include transform(scale(1));
+	  }
 }

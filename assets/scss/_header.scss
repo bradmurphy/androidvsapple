@@ -1,0 +1,148 @@
+header {
+	position: fixed;
+	z-index: 9999;
+	@include row();
+	@include span-columns(12);
+	@include box-sizing(border-box);
+	background: $headerBackground;
+	height: 48px;
+	border-bottom: solid 1px $headerBorder;
+	@include mq(tablet) {
+		height: 60px;
+	}
+	.hamburger {
+		float: left;
+		width: 15%;
+		@include box-sizing(border-box);
+		height: 48px;
+		text-align: center;
+		border-left: solid 1px $headerBorder;
+		border-right: solid 1px $headerBorder;
+		@include mq(tablet) {
+			width: 7.8125%;
+			height: 60px;
+		}
+		i {
+			cursor: pointer;
+			font-size: 1.5em;
+			color: $headerGray;
+			vertical-align: middle;
+			display: block;
+			height: 48px;
+			padding-top: 12px;
+			@include box-sizing(border-box);
+			@include transition(all .3s ease-in-out);
+			@include mq(tablet) {
+				padding-top: 18px;
+				height: 60px;
+			}
+			&:hover {
+				color: $white;
+				background: $headerGray;
+			}
+		}
+	}
+	.google-logo {
+		float: left;
+		width: 28.33333333333333%;
+		background: $white;
+		height: 48px;
+		border-right: solid 1px $headerBorder;
+		border-bottom: solid 1px $headerBorder;
+		@include box-sizing(border-box);
+		img {
+			position: relative;
+			left: 50%;
+			top: 45%;
+			margin: -14px 0 0 -37px;
+			cursor: pointer;
+		}
+		@include mq(tablet) {
+			width: 12.1875%;
+			height: 60px;
+		}
+	}
+	.nexus-logo {
+		float: left;
+		width: 28.33333333333333%;
+		height: 48px;
+		border-right: solid 1px $headerBorder;
+		@include box-sizing(border-box);
+		img {
+			position: relative;
+			left: 50%;
+			top: 45%;
+			margin: -14px 0 0 -39px;
+			cursor: pointer;
+		}
+		@include mq(tablet) {
+			width: 12.1875%;
+			height: 60px;
+		}
+	}
+	.dropdown {
+		display: none;
+		@include mq(tablet) {
+			float: left;
+			display: block;
+			width: 26.66666666666667%;
+			height: 60px;
+			text-align: center;
+			display: table;
+			border-right: solid 1px $headerBorder;
+			@include box-sizing(border-box);
+			span {
+				font-family: $roboto;
+				font-weight: 300;
+				font-size: 1.25em;
+				display: inline-block;
+				cursor: pointer;
+				margin-top: 15px;
+				i {
+					color: $googleBlue;
+					font-size: 1.25em;
+				}
+			}
+		}
+	}
+	.spacer {
+		display: none;
+		@include mq(tablet) {
+			display: block;
+			background: $white;
+			float: left;
+			width: 28.95833333333333%;
+			height: 60px;
+			border-right: solid 1px $headerBorder;
+			border-bottom: solid 1px $headerBorder;
+			@include box-sizing(border-box);
+		}
+	}
+	.buy {
+		float: left;
+		width: 28.33333333333333%;
+		text-align: center;
+		height: 48px;
+		border-right: solid 1px $headerBorder;
+		border-bottom: solid 1px $headerBorder;
+		@include box-sizing(border-box);
+		a {
+			display: block;
+			background: $googleBlue;
+			color: $white;
+			padding: 12px 0;
+			@include transition(all .3s ease-in-out);
+			&:hover {
+				background: $headerGray;
+				color: $white;
+			}
+			@include mq(tablet) {
+				padding: 18px 0;
+			}
+		}
+		@include mq(tablet) {
+			width: 12.1875%;
+			height: 60px;
+		}
+	}
+}

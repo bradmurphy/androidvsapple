@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Android vs. Apple</title>
+        <title>Android vs Apple</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/styles.min.css">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
@@ -20,6 +20,24 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+
+        <header>
+            
+            <div class="hamburger"><i class="fa fa-bars"></i></div>
+            <div class="google-logo">
+                <img src="assets/img/google-logo.png" alt="Google">
+            </div>
+            <div class="nexus-logo">
+                <img src="assets/img/nexus-logo.png" alt="Nexus 7">
+            </div>
+            <div class="dropdown"><span>Inspires <i class="fa fa-sort-desc"></i></span> </div>
+            <div class="spacer">
+                
+            </div>
+            <div class="buy">
+                <a href="#">Buy now</a>
+            </div>
+        </header>
         
         <section>
 
@@ -55,14 +73,14 @@
             
             <article class="content-wrap">
 
-                <h3 class="animated bounceIn" id="specText">specifications</h3>
+                <h3 id="specText">specifications</h3>
 
                 <div class="logo-container">
-                    <img src="assets/img/android_logo.png" alt="" id="androidLogo" class="animated bounceIn">
+                    <img src="assets/img/android_logo.png" alt="" id="androidLogo">
                 </div>
 
                 <div class="logo-container">
-                    <img src="assets/img/apple_logo.png" alt="" id="appleLogo" class="animated bounceIn">
+                    <img src="assets/img/apple_logo.png" alt="" id="appleLogo">
                 </div>      
 
             </article>
@@ -73,72 +91,87 @@
             
             <article class="content-wrap" id="specFacts">
                 
-                <div class="specWrap">
+                <div class="specWrap" id="display">
 
                     <h4>display</h4>
                     <div class="specBox">
-                        <div class="box"></div>
-                        <h5>Testing</h5>
+                        <div class="box"><i class="fa fa-times" id="displayX"></i></div>
+                        <h5 class="android">7" 1920 x 1200 (323 pixels/inch)</h5>
                     </div>
                     <div class="specBox">
-                        <div class="box"></div>
-                        <h5>Testing</h5>
+                        <div class="box"><i class="fa fa-check" id="displayCheck"></i></div>
+                        <h5>7.9" 2048 x 1536 (326 pixels/inch)</h5>
                     </div>
                     
                 </div>
 
-                <div class="specWrap">
+                <div class="specWrap" id="custom">
 
-                    <h4>sound</h4>
+                    <h4>customization</h4>
                     <div class="specBox">
-                        <div class="box"></div>
-                        <h5>Testing</h5>
+                        <div class="box"><i class="fa fa-check" id="customCheck"></i></div>
+                        <h5 class="android">Developer friendly; hack the way you want.</h5>
                     </div>
                     <div class="specBox">
-                        <div class="box"></div>
-                        <h5>Testing</h5>
+                        <div class="box"><i class="fa fa-times" id="customX"></i></div>
+                        <h5>Minimal; stuck in apple's box.</h5>
                     </div>
+                    
                     
                 </div>
 
-                <div class="specWrap">
+                <div class="specWrap" id="battery">
 
                     <h4>battery life</h4>
                     <div class="specBox">
-                        <div class="box"></div>
-                        <h5>Testing</h5>
+                        <div class="box"><i class="fa fa-check" id="batteryCheck"></i></div>
+                        <h5 class="android">10+ Hours (Replaceable)</h5>
                     </div>
                     <div class="specBox">
-                        <div class="box"></div>
-                        <h5>Testing</h5>
+                        <div class="box"><i class="fa fa-times" id="batteryX"></i></div>
+                        <h5>10+ Hours (Not Replaceable)</h5>
                     </div>
                     
                 </div>
 
-                <div class="specWrap">
+                <div class="specWrap" id="camera">
 
                     <h4>camera</h4>
                     <div class="specBox">
-                        <div class="box"></div>
-                        <h5>Testing</h5>
+                        <div class="box"><i class="fa fa-check" id="cameraCheck1"></i></div>
+                        <h5 class="android">5MP Rear / 1.2MP Front</h5>
                     </div>
                     <div class="specBox">
-                        <div class="box"></div>
-                        <h5>Testing</h5>
+                        <div class="box"><i class="fa fa-check" id="cameraCheck2"></i></div>
+                        <h5>5MP Rear / 1.2MP Front</h5>
                     </div>
                     
                 </div>
 
-                <div class="specWrap">
+                <div class="specWrap" id="os">
+
+                    <h4>OS</h4>
+                    <div class="specBox">
+                        <div class="box"><i class="fa fa-check" id="osCheck"></i></div>
+                        <h5 class="android">Android 4.4 KitKat</h5>
+                    </div>
+                    <div class="specBox">
+                        <div class="box"><i class="fa fa-times" id="osX"></i></div>
+                        <h5>IOS 7</h5>
+                    </div>
+                    
+                </div>
+
+                <div class="specWrap" id="price">
 
                     <h4>price</h4>
                     <div class="specBox">
-                        <div class="box"></div>
-                        <h5>Testing</h5>
+                        <div class="box"><i class="fa fa-check" id="priceCheck"></i></div>
+                        <h5 class="android">$229</h5>
                     </div>
                     <div class="specBox">
-                        <div class="box"></div>
-                        <h5>Testing</h5>
+                        <div class="box"><i class="fa fa-times" id="priceX"></i></div>
+                        <h5>$399</h5>
                     </div>
                     
                 </div>
@@ -147,12 +180,74 @@
 
         </section>
 
+        <section>
+            
+            <div class="content-wrap">
+                
+                <img src="assets/img/big_sexy.png" alt="Nexus 7" id="bigSexy">
+                <div class="bigSexyWrap">
+                    <img src="assets/img/big_sexy_left.png" alt="Nexus 7" id="bigSexyLeft">
+                    <img src="assets/img/big_sexy_center.png" alt="Nexus 7" id="bigSexyCenter">
+                    <img src="assets/img/big_sexy_right.png" alt="Nexus 7" id="bigSexyRight">
+                </div>
+                
+                <h6><span class="android">Nexus 7.</span> It's an easy choice.</h6>
+
+            </div>
+
+        </section>
+
+        <footer>
+            
+            <div class="content-wrap">
+                
+                <div class="footerMiddle">
+
+                    <div class="joinWrap">
+                        <img src="assets/img/android_footer.png" alt="Android">
+                        <div class="joinWrapInner">
+                            <span>Join the Nexus community.</span>
+                            <p>Sign up to receive updates from Google.</p>
+                        </div>
+                    </div>
+                    
+
+                    <form>
+                        <input type="email" placeholder="Email">
+                        <input type="checkbox">
+                        <p>Please send me product updates, new features, newsletters, special offers and market research. You may opt out of receiving emails at any time. *</p>
+
+                        <input type="submit" value="Submit">
+                    </form>
+
+                </div>
+                <div class="footerRight">
+                    
+                    <div class="followWrap">
+                        <img src="assets/img/google_follow1.png" alt="Google">
+                        <img src="assets/img/google_follow2.png" alt="Google">
+                    </div>
+
+                </div>
+                <div class="footerLeft">
+                    
+                    <ul>
+                        <li><a href="#">Language</a></li>
+                        <li><a href="#">Google</a></li>
+                        <li><a href="#">Privacy & Terms</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </footer>
+
 
         <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <script src="assets/js/main.min.js"></script>
 
         <!-- LIVERELOADING FOR GRUNT -->
-        <!-- <script src="//localhost:35729/livereload.js"></script> -->
+        <script src="//localhost:35729/livereload.js"></script>
         <!-- REMOVE FOR PRODUCTION -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
