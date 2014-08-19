@@ -121,8 +121,9 @@ h4 {
 
 h5 {
 	font-family: $roboto;
-	font-size: 1em;
+	font-size: .95em;
 	font-weight: 300;
+	margin-top: .65em;
 	@include mq(android) {
 		font-size: 1.15em;
 	}

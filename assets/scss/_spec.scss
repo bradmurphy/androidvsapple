@@ -51,12 +51,13 @@
 	}
 	.specBox {
 		padding: 10px 0;
+		height: 125px;
 		@include span-columns(12);
 		@include row();
 		@include box-sizing(border-box);
 		@include mq(tablet) {
 			@include span-columns(4);
-		} 
+		}
 		.box {
 			float: left;
 			@include span-columns(2.5);
